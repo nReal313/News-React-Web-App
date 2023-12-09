@@ -47,7 +47,7 @@ export class NavBar extends Component {
 		return <div className='container-lg'>
 			<nav className="navbar navbar-expand-lg bg-dark border rounded">
 				<div className="container-lg text-md-center">
-					<Link className="navbar-brand ms-2" to={`${this.state.country}/${this.state.category}`}>
+					<Link className="navbar-brand ms-2" to="/US/General">
 						<div className="fs-3 ms-3" style={{ fontFamily: "gill sans, sans-serif", color: "white" }}>Newsy</div>
 					</Link>
 
