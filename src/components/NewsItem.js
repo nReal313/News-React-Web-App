@@ -10,7 +10,7 @@ export class NewsItem extends Component {
                     <div className="card-header">
                         <strong>{heading}</strong>
                     </div>
-                    <img src={this.props.url ? this.props.url : random} className="card-img-top" alt="..." style={{ objectFit: 'cover' }} />
+                    <img src={url ? url : random} className="card-img-top" alt="..." style={{ objectFit: 'cover', maxHeight: "150px", height: "150px" }} />
                     <div className="card-body" style={{ height: "20rem" }}>
                         <h6 className="card-title"><strong>{title}</strong></h6>
                         <p className="card-text ">{desc}...</p>

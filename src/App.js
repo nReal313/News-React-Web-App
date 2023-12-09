@@ -3,11 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import NavBar from "./components/NavBar";
 import News from "./components/News";
+import New from "./components/New";
 
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
+  Navigate
 } from "react-router-dom";
 
 //business entertainment general health science sports technology
@@ -19,14 +21,8 @@ function App() {
       <div className="App">
         <NavBar />
         <Routes>
-          <Route path="/" element={<News category="general" key="general" />} />
-          <Route path="/general" element={<News category="general" key="general" />} />
-          <Route path="/business" element={<News category="business" key="business" />} />
-          <Route path="/entertainment" element={<News category="entertainment" key="entertainment" />} />
-          <Route path="/health" element={<News category="health" key="health" />} />
-          <Route path="/science" element={<News category="science" key="science" />} />
-          <Route path="/sports" element={<News category="sports" key="sports" />} />
-          <Route path="/technology" element={<News category="technology" key="technology" />} />
+          <Route path="/" element={<Navigate to="/US/General" replace />} />
+          <Route path="/:country/:category" element={<New />} />
         </Routes>
       </div>
     </BrowserRouter>
